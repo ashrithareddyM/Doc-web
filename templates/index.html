@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {{ doctor.name }} | {{ doctor.specialization }}
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='styles.css') }}">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- ================================================= -->
+<!-- NAVBAR -->
+<!-- ================================================= -->
+
+<header class="navbar">
+
+    <div class="container nav-content">
+
+        <a href="#home"
+           class="brand">
+
+            <span class="brand-icon">
+                ✦
+            </span>
+
+            {{ doctor.name }}
+
+        </a>
+
+
+        <nav>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#clinic">
+                Clinic
+            </a>
+
+            <a
+                href="tel:{{ doctor.phone }}"
+                class="nav-call">
+
+                📞 Call
+
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================================================= -->
+<!-- HERO -->
+<!-- ================================================= -->
+
+<section class="hero"
+         id="home">
+
+    <div class="hero-glow glow-one"></div>
+
+    <div class="hero-glow glow-two"></div>
+
+
+    <div class="container hero-grid">
+
+
+        <div class="hero-text">
+
+            <div class="eyebrow">
+
+                ✦ DERMATOLOGY • SKIN • HAIR
+
+            </div>
+
+
+            <h1>
+
+                Healthy skin.
+                <span>
+                    Confident you.
+                </span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Personalized dermatology care designed
+                around your skin, hair and wellbeing.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="tel:{{ doctor.phone }}"
+                    class="primary-button">
+
+                    📞 Book a Consultation
+
+                </a>
+
+
+                <a
+                    href="#services"
+                    class="secondary-button">
+
+                    Explore Services ↓
+
+                </a>
+
+            </div>
+
+
+            <div class="trust-row">
+
+                <div>
+                    <strong>✓</strong>
+                    Patient-focused care
+                </div>
+
+                <div>
+                    <strong>✓</strong>
+                    Modern treatments
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Doctor Card -->
+
+        <div class="hero-card">
+
+
+            <div class="floating-badge badge-top">
+
+                ✨ Personalized Care
+
+            </div>
+
+
+            <div class="doctor-avatar">
+
+                <div class="avatar-circle">
+
+                    🩺
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-doctor-info">
+
+                <p>
+                    Meet your dermatologist
+                </p>
+
+                <h2>
+                    {{ doctor.name }}
+                </h2>
+
+                <span>
+                    {{ doctor.specialization }}
+                </span>
+
+            </div>
+
+
+            <div class="floating-badge badge-bottom">
+
+                ♥ Your skin matters
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- QUICK INFORMATION -->
+<!-- ================================================= -->
+
+<section class="quick-info">
+
+    <div class="container quick-grid">
+
+
+        <div class="quick-item">
+
+            <span class="quick-icon">
+                🕐
+            </span>
+
+            <div>
+
+                <small>
+                    CLINIC HOURS
+                </small>
+
+                <p>
+                    {{ doctor.timings }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="quick-item">
+
+            <span class="quick-icon">
+                📍
+            </span>
+
+            <div>
+
+                <small>
+                    LOCATION
+                </small>
+
+                <p>
+                    {{ doctor.address }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="quick-item">
+
+            <span class="quick-icon">
+                📞
+            </span>
+
+            <div>
+
+                <small>
+                    APPOINTMENTS
+                </small>
+
+                <p>
+                    {{ doctor.phone }}
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- ABOUT -->
+<!-- ================================================= -->
+
+<section class="about-section"
+         id="about">
+
+    <div class="container about-grid">
+
+        <div class="section-label">
+
+            <span>
+                01
+            </span>
+
+            ABOUT THE DOCTOR
+
+        </div>
+
+
+        <div class="about-content">
+
+            <h2>
+
+                Care that starts
+                <em>with you.</em>
+
+            </h2>
+
+
+            <p>
+
+                {{ doctor.about }}
+
+            </p>
+
+
+            <div class="about-highlight">
+
+                <span>
+                    ✦
+                </span>
+
+                Thoughtful care.
+                Modern dermatology.
+                Better skin confidence.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- SERVICES -->
+<!-- ================================================= -->
+
+<section class="services-section"
+         id="services">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div class="section-label">
+
+                <span>
+                    02
+                </span>
+
+                SERVICES
+
+            </div>
+
+
+            <h2>
+
+                Skin & hair care,
+                <em>made personal.</em>
+
+            </h2>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            {% for service in services %}
+
+            <div class="service-card">
+
+                <div class="service-number">
+
+                    {{ "%02d"|format(loop.index) }}
+
+                </div>
+
+
+                <div class="service-icon">
+
+                    {% if loop.index == 1 %}
+                        ✨
+                    {% elif loop.index == 2 %}
+                        🌿
+                    {% elif loop.index == 3 %}
+                        💫
+                    {% else %}
+                        💎
+                    {% endif %}
+
+                </div>
+
+
+                <h3>
+
+                    {{ service.name }}
+
+                </h3>
+
+
+                <p>
+
+                    {{ service.description }}
+
+                </p>
+
+
+                <span class="card-arrow">
+
+                    ↗
+
+                </span>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- CALL TO ACTION -->
+<!-- ================================================= -->
+
+<section class="cta-section">
+
+    <div class="container cta-card">
+
+
+        <div>
+
+            <p class="cta-small">
+
+                READY WHEN YOU ARE
+
+            </p>
+
+
+            <h2>
+
+                Let's talk about
+                <em>your skin.</em>
+
+            </h2>
+
+
+            <p>
+
+                Call the clinic to book your consultation.
+
+            </p>
+
+        </div>
+
+
+        <a
+            href="tel:{{ doctor.phone }}"
+            class="cta-button">
+
+            📞 Call {{ doctor.phone }}
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- CLINIC + GOOGLE MAP -->
+<!-- ================================================= -->
+
+<section class="clinic-section"
+         id="clinic">
+
+    <div class="container clinic-grid">
+
+
+        <div>
+
+            <div class="section-label">
+
+                <span>
+                    03
+                </span>
+
+                VISIT THE CLINIC
+
+            </div>
+
+
+            <h2>
+
+                We're here
+                <em>for you.</em>
+
+            </h2>
+
+
+            <div class="clinic-detail">
+
+                <span>
+                    📍
+                </span>
+
+                <div>
+
+                    <strong>
+                        Address
+                    </strong>
+
+                    <p>
+                        {{ doctor.address }}
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="clinic-detail">
+
+                <span>
+                    🕐
+                </span>
+
+                <div>
+
+                    <strong>
+                        Opening Hours
+                    </strong>
+
+                    <p>
+                        {{ doctor.timings }}
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="clinic-detail">
+
+                <span>
+                    📞
+                </span>
+
+                <div>
+
+                    <strong>
+                        Call the Clinic
+                    </strong>
+
+                    <p>
+                        {{ doctor.phone }}
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="clinic-buttons">
+
+                <a
+                    href="tel:{{ doctor.phone }}"
+                    class="primary-button">
+
+                    📞 Call to Book
+
+                </a>
+
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query={{ doctor.address | urlencode }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="map-link">
+
+                    🗺️ Get Directions
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- GOOGLE MAP -->
+
+        <div class="map-card">
+
+            {% if google_maps_api_key %}
+
+                <iframe
+                    class="google-map"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    src="https://www.google.com/maps/embed/v1/place?key={{ google_maps_api_key }}&q={{ doctor.address | urlencode }}">
+                </iframe>
+
+            {% else %}
+
+                <div class="map-missing">
+
+                    <div class="map-missing-icon">
+                        📍
+                    </div>
+
+                    <h3>
+                        Clinic Location
+                    </h3>
+
+                    <p>
+                        {{ doctor.address }}
+                    </p>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query={{ doctor.address | urlencode }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="map-link">
+
+                        Open in Google Maps ↗
+
+                    </a>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- FOOTER -->
+<!-- ================================================= -->
+
+<footer>
+
+    <div class="container footer-content">
+
+
+        <div>
+
+            <div class="brand footer-brand">
+
+                <span class="brand-icon">
+                    ✦
+                </span>
+
+                {{ doctor.name }}
+
+            </div>
+
+
+            <p>
+                {{ doctor.specialization }}
+            </p>
+
+        </div>
+
+
+        <div class="footer-right">
+
+            <p>
+                © 2026 {{ doctor.name }}
+            </p>
+
+
+            <a href="{{ url_for('login') }}">
+
+                🔐 Doctor Login
+
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

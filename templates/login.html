@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Doctor Login
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='styles.css') }}">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body class="login-page">
+
+
+<div class="login-container">
+
+
+    <a
+        href="{{ url_for('home') }}"
+        class="back-home">
+
+        ← Back to website
+
+    </a>
+
+
+    <div class="login-card">
+
+
+        <div class="login-icon">
+
+            🩺
+
+        </div>
+
+
+        <p class="eyebrow">
+
+            PRIVATE ACCESS
+
+        </p>
+
+
+        <h1>
+
+            Doctor Login
+
+        </h1>
+
+
+        <p class="login-description">
+
+            Manage your profile, clinic information
+            and services.
+
+        </p>
+
+
+        {% with messages = get_flashed_messages() %}
+
+            {% if messages %}
+
+                {% for message in messages %}
+
+                    <div class="login-message">
+
+                        {{ message }}
+
+                    </div>
+
+                {% endfor %}
+
+            {% endif %}
+
+        {% endwith %}
+
+
+        <form method="POST">
+
+
+            <label>
+                Username
+            </label>
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Enter username"
+                required>
+
+
+            <label>
+                Password
+            </label>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                required>
+
+
+            <button
+                type="submit"
+                class="login-button">
+
+                🔐 Sign In
+
+            </button>
+
+        </form>
+
+
+        <p class="login-note">
+
+            This area is only for clinic management.
+
+        </p>
+
+    </div>
+
+</div>
+
+
+</body>
+
+</html>
