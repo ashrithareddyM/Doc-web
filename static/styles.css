@@ -1302,3 +1302,284 @@ footer {
     color: var(--muted);
     margin-bottom: 20px;
 }
+/* ==========================================
+   MOBILE RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
+
+    /* ---------- GENERAL ---------- */
+
+    .container {
+        width: 92%;
+    }
+
+
+    /* ---------- NAVBAR ---------- */
+
+    .nav-content {
+        min-height: 65px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .brand {
+        font-size: 17px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        padding: 65px 0 55px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* ---------- DOCTOR CARD ---------- */
+
+    .hero-card {
+        min-height: 380px;
+    }
+
+    .doctor-avatar {
+        width: 210px;
+        height: 210px;
+    }
+
+    .avatar-circle {
+        width: 150px;
+        height: 150px;
+        font-size: 55px;
+    }
+
+    .floating-badge {
+        font-size: 11px;
+        padding: 9px 12px;
+    }
+
+    .badge-top {
+        top: 20px;
+        right: 15px;
+    }
+
+    .badge-bottom {
+        bottom: 20px;
+        left: 15px;
+    }
+
+
+    /* ---------- QUICK INFORMATION ---------- */
+
+    .quick-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .quick-item {
+        padding: 12px 5px;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about-section {
+        padding: 70px 0;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-content h2 {
+        font-size: 42px;
+    }
+
+    .about-content > p {
+        font-size: 16px;
+    }
+
+
+    /* ---------- SERVICES ---------- */
+
+    .services-section {
+        padding: 70px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 42px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 280px;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .cta-section {
+        padding: 50px 0;
+    }
+
+    .cta-card {
+        padding: 35px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta-card h2 {
+        font-size: 38px;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* ---------- CLINIC ---------- */
+
+    .clinic-section {
+        padding: 70px 0;
+    }
+
+    .clinic-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .clinic-grid h2 {
+        font-size: 42px;
+    }
+
+    .clinic-buttons {
+        flex-direction: column;
+    }
+
+    .clinic-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .map-card {
+        min-height: 320px;
+    }
+
+    .google-map {
+        height: 320px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-right {
+        text-align: left;
+    }
+
+
+    /* ---------- LOGIN PAGE ---------- */
+
+    .login-page {
+        padding: 20px;
+    }
+
+    .login-card {
+        padding: 32px 22px;
+    }
+
+    .login-card h1 {
+        font-size: 38px;
+    }
+
+
+    /* ---------- DOCTOR DASHBOARD ---------- */
+
+    .dashboard-container {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .dashboard-nav {
+        padding: 12px 0;
+    }
+
+    .dashboard-links {
+        gap: 10px;
+    }
+
+    .dashboard-links a {
+        font-size: 12px;
+    }
+
+    .dashboard-welcome {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .dashboard-welcome h1 {
+        font-size: 38px;
+    }
+
+    .dashboard-card {
+        padding: 22px 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .dashboard-service {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .preview-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .preview-button {
+        width: 100%;
+        text-align: center;
+    }
+
+}
